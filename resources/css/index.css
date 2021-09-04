@@ -1,0 +1,137 @@
+* {
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+h1 {
+	color: DarkOrange;
+	margin: 8px;
+}
+
+p,
+li {
+	font-size: 18px;
+	margin: 8px;
+}
+
+a {
+	text-decoration: none;
+	margin: 8px;
+}
+
+body {
+	margin-top: 81px;
+	height: 100%;
+	margin: 0;
+}
+
+html {
+	height: 100%;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 10;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  transform: translate(0%, +70%);
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  color: #E01000;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  color: #E01000;
+}
+
+.parallax {
+	background-image: url("../images/background.jpg");
+
+	height: 100%;
+
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  position: relative;
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  /*border: 1px solid #f1f1f1;*/
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  display: inline-block;
+  margin: 5%;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: green;
+  color: #bbb;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.footer {
+	background-color: #333;
+	width: 100%;
+	height: 5%;
+}
+
+.footer p {
+	color: #f2f2f2;
+	text-align: center;
+	transform: translateY(+50%);
+}
+
+.invisible {
+	visibility: hidden;
+}
